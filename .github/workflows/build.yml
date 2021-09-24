@@ -18,7 +18,7 @@ jobs:
         uses: ravinderjangra/android-ndk-toolchain-setup@0.2
         with:
           api: '21'
-          arch: 'arm'
+          arch: 'x86'
           install-location: 'toolchains'
           force: true
       - shell: bash
