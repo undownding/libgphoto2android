@@ -22,7 +22,7 @@ jobs:
           force: true
       - shell: bash
         name: Download libgphoto2
-        run: curl https://github.com/gphoto/libgphoto2/releases/download/v2.5.27/libgphoto2-2.5.27.tar.bz2 > libgphoto2.tar.bz2
+        run: wget https://github.com/gphoto/libgphoto2/releases/download/v2.5.27/libgphoto2-2.5.27.tar.bz2
       - shell: bash
         name: Build with NDK
-        run: tar -xvf libgphoto2.tar.bz2 && cp build.sh libgphoto2/build.sh && cd libgphoto2 && chmod +x build.sh && ./build.sh
+        run: tar -xvf libgphoto2-2.5.27.tar.bz2 && cp build.sh libgphoto2-2.5.27/build.sh && cd libgphoto2-2.5.27 && chmod +x build.sh && ./build.sh
