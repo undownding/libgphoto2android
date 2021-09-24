@@ -1,0 +1,22 @@
+name: Build NDK library
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - shell: bash
+        run: mkdir toolchains
+      - name: specify NDK
+        uses: ravinderjangra/android-ndk-toolchain-setup@0.2
+        with:
+          api: '21'
+          arch: 'arm'
+          install-location: 'toolchains'
+          force: true
