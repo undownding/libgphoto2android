@@ -20,3 +20,7 @@ jobs:
           arch: 'arm'
           install-location: 'toolchains'
           force: true
+      - shell: bash
+        run: curl https://github.com/gphoto/libgphoto2/releases/download/v2.5.27/libgphoto2-2.5.27.tar.bz2 > libgphoto2.tar.bz2
+      - shell: bash
+        run: tar -xvf libgphoto.tar.bz2 && cp build.sh libgphoto2 && cd libgphoto2 && chmod +x build.sh && ./build.sh
